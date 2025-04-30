@@ -135,7 +135,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',       # DRF
     'companies',            # your new app
-    'ipos',                 # your other new app
+    
 ]
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
