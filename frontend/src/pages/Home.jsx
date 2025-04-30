@@ -53,7 +53,8 @@ function Companies() {
   
   <div className="grid grid-cols-3 gap-8 justify-items-center">
     {companies.map(company => (
-      <div key={company.id} className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center w-110 h-110">
+      <div key={company.id} 
+      className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center w-110 h-110 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
         <div className="flex items-center gap-4 mb-6">
         {company.logo && (
           <img 
