@@ -5,3 +5,7 @@ class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
         fields = '__all__'
+        extra_kwargs = {
+            'logo': {'required': False},
+
+         }
