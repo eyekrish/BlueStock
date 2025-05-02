@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 const IPOForm = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -14,7 +14,7 @@ const IPOForm = () => {
         issue_type: '',
         listing_date: '',
     });
-
+    const navigate = useNavigate();
     const [companies, setCompanies] = useState([]);
     const [editModalOpen, setEditModalOpen] = useState(false);
     const [editFormData, setEditFormData] = useState({
@@ -114,8 +114,18 @@ const IPOForm = () => {
     }, []);
 
     return (
+        
         <div className="p-6 relative">
 
+            <div className="px-4 py-6 flex justify-between items-center">
+                <p className="text-2xl font-bold text-gray-800 ">Upcoming IPO | Dashboard</p>
+                <button
+                    onClick={() => navigate("/register")}
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                    Register
+                </button>
+            </div>
 
             {/* Company List Table */}
             <div className="overflow-x-auto mb-10">
@@ -193,7 +203,7 @@ const IPOForm = () => {
                             animate={{ scale: 1.1, opacity: 1, y: 0, x:0 }}
                             exit={{ scale: 0.1, opacity: 0, y:-1000 ,x:1000 }}
                             transition={{
-                                duration: 0.8,
+                                duration: 0.1,
                                 ease: "easeInOut",
                             }}
                             style={{ willChange: "transform, opacity" }}

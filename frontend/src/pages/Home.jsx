@@ -35,11 +35,11 @@ function Companies() {
     <div className="container mx-auto px-4 py-8">
 
 
-      <div className="flex justify-start py-8 px-4">
+      <div className="flex justify-start py-8 ">
         <img
           src={logoImage}
           alt="Page Logo"
-          className="h-15 w-150 object-contain"
+          className="h-15 w-127 object-contain "
         />
       </div>
 
