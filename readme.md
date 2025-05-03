@@ -42,11 +42,19 @@ bluestock/
 │   │   ├── pages/               # Route-level components (Home.jsx, IPOs.jsx, etc.)
 │   │   ├── components/          # Reusable UI components (Navbar.jsx, Card.jsx)
 │   │   ├── App.jsx              # Root app component with routes
-│   │   └── main.jsx             # V
+│   │   └── main.jsx             # Vite entry point
+│   ├── index.html               # HTML template
+│   └── tailwind.config.js       # Tailwind configuration
+│
+├── .gitignore                   # Git ignored files
+├── README.md                    # Project readme
+├── requirements.txt             # Python dependencies
+└── package.json                 # Node.js dependencies (frontend)
 
 
 
----
+
+```bash
 
 ## 🔧 Backend Setup
 
@@ -68,7 +76,7 @@ python manage.py migrate
 
 # Step 6: Start server
 python manage.py runserver
-```
+
 ## Frontend Setup
 ```bash
 # Step 1: Navigate to frontend
@@ -79,4 +87,4 @@ npm install
 
 # Step 3: Start development server
 npm run dev
-```
+
