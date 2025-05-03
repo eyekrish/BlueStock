@@ -50,11 +50,11 @@ bluestock/
 ├── README.md                    # Project readme
 ├── requirements.txt             # Python dependencies
 └── package.json                 # Node.js dependencies (frontend)
+```
 
 
 
 
-```bash
 
 ## 🔧 Backend Setup
 
@@ -76,7 +76,7 @@ python manage.py migrate
 
 # Step 6: Start server
 python manage.py runserver
-
+```
 ## Frontend Setup
 ```bash
 # Step 1: Navigate to frontend
