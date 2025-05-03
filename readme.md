@@ -77,7 +77,7 @@ python manage.py migrate
 # Step 6: Start server
 python manage.py runserver
 ```
-## Frontend Setup
+## 🎨 Frontend Setup
 ```bash
 # Step 1: Navigate to frontend
 cd frontend
