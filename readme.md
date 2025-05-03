@@ -24,22 +24,25 @@ Bluestock is a web application that displays detailed information about company 
 - 📎 Document uploads and downloads (with cascade deletion)
 - 🔐 User authentication (JWT or Django Auth)
 - 📱 Responsive design
-
 ## 📁 Project Structure
 
+```bash
 bluestock/
-├── backend/ # Django backend
-│ ├── bluestock/ # Main Django project (settings, wsgi, asgi)
-│ ├── api/ # Custom Django app for IPOs, companies, documents
-│ └── manage.py
-├── frontend/ # React frontend using Vite
-│ ├── src/
-│ │ ├── pages/ # Route components (Home, IPO list, etc.)
-│ │ ├── components/ # Shared UI components
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ └── index.html
-└── README.md
+├── backend/                     # Django backend
+│   ├── bluestock/               # Django project settings (settings.py, urls.py, wsgi.py)
+│   ├── api/                     # Django app for IPOs, Companies, Documents
+│   │   ├── models.py            # Database models
+│   │   ├── views.py             # API views
+│   │   ├── serializers.py       # DRF serializers
+│   │   ├── urls.py              # API routing
+│   └── manage.py                # Django project entry point
+│
+├── frontend/                    # React frontend using Vite
+│   ├── src/
+│   │   ├── pages/               # Route-level components (Home.jsx, IPOs.jsx, etc.)
+│   │   ├── components/          # Reusable UI components (Navbar.jsx, Card.jsx)
+│   │   ├── App.jsx              # Root app component with routes
+│   │   └── main.jsx             # V
 
 
 
@@ -65,7 +68,9 @@ python manage.py migrate
 
 # Step 6: Start server
 python manage.py runserver
-
+```
+## Frontend Setup
+```bash
 # Step 1: Navigate to frontend
 cd frontend
 
@@ -74,3 +79,4 @@ npm install
 
 # Step 3: Start development server
 npm run dev
+```
